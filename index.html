@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Find and book trusted local service providers across Zambales.">
+  <meta name="theme-color" content="#073d59">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23073d59'/%3E%3Cpath d='M15 19h34L27 45h22' fill='none' stroke='%23dff55d' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <title>ZambaGawa — Local help, made easier</title>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ZambaGawa home"><span class="brand-mark">ZG</span><b>Zamba<span>Gawa</span></b></a>
+    <nav aria-label="Primary navigation"><a href="#services">Services</a><a href="#providers">Providers</a><a href="#how">How it works</a></nav>
+    <button class="outline-btn" data-scroll="#providers">Find a provider <span>↗</span></button>
+  </header>
+
+  <main id="top">
+    <section class="search-stage">
+      <div class="stage-copy">
+        <p class="eyebrow"><i></i> Made for Zambales</p>
+        <h1>Local help,<br><em>made easier.</em></h1>
+        <p>Discover skilled professionals nearby and request a schedule without waiting for referrals.</p>
+      </div>
+      <form class="search-panel" id="searchForm">
+        <label><span>What do you need?</span><div class="control"><span>⌕</span><input id="serviceQuery" type="search" placeholder="Try “aircon cleaning”"></div></label>
+        <label><span>Where in Zambales?</span><div class="control"><span>⌖</span><select id="municipality"><option value="all">All municipalities</option><option>Olongapo</option><option>Subic</option><option>Castillejos</option><option>San Marcelino</option><option>Botolan</option><option>Iba</option></select></div></label>
+        <button class="primary-btn" type="submit">Find a pro <span>→</span></button>
+        <div class="popular"><span>Popular:</span><button type="button">Electrician</button><button type="button">Cleaning</button><button type="button">Photographer</button></div>
+      </form>
+    </section>
+
+    <section class="trust-strip" aria-label="Platform benefits"><div><strong>Local first</strong><small>Providers from your area</small></div><div><strong>Verified profiles</strong><small>Identity and skills checked</small></div><div><strong>Clear pricing</strong><small>Know the rate before booking</small></div></section>
+
+    <section class="section" id="services">
+      <div class="section-head"><div><p class="kicker">Browse by category</p><h2>What needs doing?</h2></div><a href="#providers">See providers →</a></div>
+      <div class="category-grid">
+        <button data-category="Home repair"><span>⌂</span><b>Home repair</b><small>Repairs and maintenance</small></button>
+        <button data-category="Cleaning"><span>✦</span><b>Cleaning</b><small>Home and office</small></button>
+        <button data-category="Electrical"><span>ϟ</span><b>Electrical</b><small>Installation and repair</small></button>
+        <button data-category="Events"><span>◇</span><b>Events</b><small>Photo, styling, and more</small></button>
+      </div>
+    </section>
+
+    <section class="section providers-section" id="providers">
+      <div class="section-head"><div><p class="kicker">Near you</p><h2>Recommended providers</h2></div><button class="clear-btn" id="clearFilters" hidden>Clear filters</button></div>
+      <div class="status-row"><span id="resultCount">Loading providers…</span><span class="data-status" id="dataStatus"></span></div>
+      <div class="provider-grid" id="providerGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>No matching providers</h3><p>Try another service or municipality.</p><button class="primary-btn" id="resetSearch">Show all providers</button></div>
+    </section>
+
+    <section class="how" id="how"><div><p class="kicker">Simple from start to finish</p><h2>Get the job done<br>in three steps.</h2></div><ol><li><span>01</span><div><b>Tell us what you need</b><p>Search for a service and select your municipality.</p></div></li><li><span>02</span><div><b>Choose your provider</b><p>Compare ratings, completed jobs, and starting rates.</p></div></li><li><span>03</span><div><b>Request a schedule</b><p>Enter the job details and get a booking reference.</p></div></li></ol></section>
+
+    <section class="local-banner"><div><p class="eyebrow"><i></i> Built around local talent</p><h2>May galing dito.</h2><p>Good work is closer than you think. ZambaGawa helps local skills get found.</p></div><button class="lime-btn" data-scroll="#providers">Book local talent →</button></section>
+  </main>
+
+  <footer><a class="brand" href="#top"><span class="brand-mark">ZG</span><b>Zamba<span>Gawa</span></b></a><p>Local services, powered by local talent.</p><small>Portfolio MVP by Daniele Quiesha E. Diaz</small></footer>
+
+  <dialog id="bookingDialog"><button class="dialog-close" aria-label="Close booking form">×</button><div class="dialog-content"><p class="kicker">Booking request</p><h2 id="bookingTitle">Request a schedule</h2><p id="bookingService"></p><form id="bookingForm"><input type="hidden" name="providerId"><div class="form-grid"><label><span>Your name</span><input name="customerName" required minlength="2" autocomplete="name"></label><label><span>Email</span><input name="email" type="email" required autocomplete="email"></label><label><span>Phone number</span><input name="phone" required minlength="7" autocomplete="tel"></label><label><span>Preferred date</span><input name="preferredDate" type="date" required></label><label class="full"><span>Job location</span><select name="municipality" required><option value="">Choose municipality</option><option>Olongapo</option><option>Subic</option><option>Castillejos</option><option>San Marcelino</option><option>Botolan</option><option>Iba</option></select></label><label class="full"><span>What needs to be done?</span><textarea name="details" required minlength="10" rows="4" placeholder="Describe the job, preferred time, and important details."></textarea></label></div><p class="form-error" id="formError" role="alert"></p><button class="primary-btn submit-booking" type="submit">Send booking request →</button></form><div class="success-state" id="successState" hidden><span>✓</span><h3>Request received</h3><p>Your booking reference is:</p><strong id="bookingReference"></strong><button class="primary-btn" type="button" id="doneButton">Done</button></div></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
