@@ -18,14 +18,14 @@ ZambaGawa is a database-backed local-services booking MVP for Zambales. It helps
 - Vercel Node.js Functions under `/api`
 - Supabase PostgreSQL via its REST API
 
-No database secrets are exposed in browser code. The Supabase service-role key is used only inside Vercel Functions.
+No database secrets are exposed in browser code. The Supabase secret key is used only inside Vercel Functions.
 
 ## Run the database
 
 1. Create a free Supabase project.
 2. Open **SQL Editor** in Supabase.
 3. Copy and run [`supabase/schema.sql`](supabase/schema.sql). This creates the provider and booking tables and inserts the portfolio sample providers.
-4. In Supabase, copy the project URL and service-role key from **Project Settings → API**.
+4. In Supabase, copy the project URL and a secret key from **Project Settings → API Keys**.
 
 ## Deploy on Vercel
 
@@ -35,7 +35,7 @@ No database secrets are exposed in browser code. The Supabase service-role key i
 4. In the Vercel project, open **Settings → Environment Variables** and add:
 
    - `SUPABASE_URL`
-   - `SUPABASE_SERVICE_ROLE_KEY`
+   - `SUPABASE_SECRET_KEY`
 
 5. Redeploy the latest deployment.
 6. Check `/api/health`. It should return `{"status":"ok","databaseConfigured":true}`.
@@ -48,7 +48,7 @@ The page can be opened through any local static server. Without Vercel Functions
 
 ## Important
 
-- Never commit `.env` or the Supabase service-role key.
+- Never commit `.env` or the Supabase secret key.
 - The displayed providers are fictional portfolio sample data.
 - Before accepting real public bookings, add spam protection, privacy terms, provider consent, and an admin workflow.
 
