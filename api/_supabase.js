@@ -1,6 +1,6 @@
 const getConfig = () => {
   const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const key = process.env.SUPABASE_SECRET_KEY;
   if (!url || !key) return null;
   return { url: url.replace(/\/$/, ''), key };
 };
@@ -16,7 +16,6 @@ async function supabaseRequest(path, options = {}) {
     ...options,
     headers: {
       apikey: config.key,
-      Authorization: `Bearer ${config.key}`,
       'Content-Type': 'application/json',
       ...options.headers
     }
