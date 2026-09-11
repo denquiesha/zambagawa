@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 test('environment example does not contain a real secret', () => {
   const fs = require('node:fs');
   const value = fs.readFileSync('.env.example', 'utf8');
-  assert.match(value, /your-service-role-key/);
+  assert.match(value, /sb_secret_your-secret-key/);
   assert.doesNotMatch(value, /eyJ[A-Za-z0-9_-]{20,}/);
 });
 
