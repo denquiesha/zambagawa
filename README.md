@@ -40,7 +40,7 @@ No database secrets are exposed in browser code. The Supabase secret key is used
 5. Redeploy the latest deployment.
 6. Check `/api/health`. It should return `{"status":"ok","databaseConfigured":true}`.
 
-Vercel will automatically publish new production deployments whenever changes are pushed to `main`.
+Git integration is enabled for this project. Vercel will automatically publish new production deployments whenever changes are pushed to `main`.
 
 ## Local preview
 
