@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Find and book trusted local service providers across Zambales.">
-  <meta name="theme-color" content="#073d59">
-  <link rel="icon" type="image/svg+xml" href="/assets/zambagawa-icon.svg">
+  <meta name="theme-color" content="#0b5d6b">
+  <link rel="icon" type="image/svg+xml" href="/assets/zambagawa-logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
@@ -14,11 +14,7 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="ZambaGawa home">
-  <img src="/assets/zambagawa-logo.svg"
-       alt="ZambaGawa"
-       class="brand-logo">
-</a>
+    <a class="brand" href="#top" aria-label="ZambaGawa home"><img src="/assets/zambagawa-logo.svg" alt="" class="brand-logo"><b>Zamba<span>Gawa</span></b></a>
     <nav aria-label="Primary navigation"><a href="#services">Services</a><a href="#providers">Providers</a><a href="#how">How it works</a></nav>
     <button class="outline-btn" data-scroll="#providers">Find a provider <span>↗</span></button>
   </header>
@@ -26,9 +22,10 @@
   <main id="top">
     <section class="search-stage">
       <div class="stage-copy">
-        <p class="eyebrow"><i></i> Made for Zambales</p>
+        <p class="eyebrow"><i></i> Maabig a aldaw!</p>
         <h1>Local help,<br><em>made easier.</em></h1>
-        <p>Discover skilled professionals nearby and request a schedule without waiting for referrals.</p>
+        <p>Find trusted people for the work you need—right here in Zambales.</p>
+        <div class="local-note"><span>Made for Zambalenos</span><span>From Subic Bay to Iba</span></div>
       </div>
       <form class="search-panel" id="searchForm">
         <label><span>What do you need?</span><div class="control"><span>⌕</span><input id="serviceQuery" type="search" placeholder="Try “aircon cleaning”"></div></label>
@@ -38,7 +35,10 @@
       </form>
     </section>
 
-    <section class="trust-strip" aria-label="Platform benefits"><div><strong>Local first</strong><small>Providers from your area</small></div><div><strong>Verified profiles</strong><small>Identity and skills checked</small></div><div><strong>Clear pricing</strong><small>Know the rate before booking</small></div></section>
+    <section class="trust-wrap" aria-label="Platform benefits">
+      <div class="trust-intro"><span>Made for Zambalenos</span><p>Local skills deserve to be easier to find.</p></div>
+      <div class="trust-strip"><div><strong>Local first</strong><small>Providers from your area</small></div><div><strong>Verified profiles</strong><small>Identity and skills checked</small></div><div><strong>Clear pricing</strong><small>Know the rate before booking</small></div></div>
+    </section>
 
     <section class="section" id="services">
       <div class="section-head"><div><p class="kicker">Browse by category</p><h2>What needs doing?</h2></div><a href="#providers">See providers →</a></div>
@@ -59,10 +59,10 @@
 
     <section class="how" id="how"><div><p class="kicker">Simple from start to finish</p><h2>Get the job done<br>in three steps.</h2></div><ol><li><span>01</span><div><b>Tell us what you need</b><p>Search for a service and select your municipality.</p></div></li><li><span>02</span><div><b>Choose your provider</b><p>Compare ratings, completed jobs, and starting rates.</p></div></li><li><span>03</span><div><b>Request a schedule</b><p>Enter the job details and get a booking reference.</p></div></li></ol></section>
 
-    <section class="local-banner"><div><p class="eyebrow"><i></i> Built around local talent</p><h2>Galing ng lokal, tatak Zambaleño.</h2><p>Good work is closer than you think. ZambaGawa helps local skills get found.</p></div><button class="lime-btn" data-scroll="#providers">Book local talent →</button></section>
+    <section class="local-banner"><div><p class="eyebrow"><i></i> Made for Zambalenos</p><h2>Galing ng lokal, tatak Zambaleño.</h2><p>From coastal towns to inland communities, ZambaGawa makes local skills easier to find and support.</p></div><button class="lime-btn" data-scroll="#providers">Book local talent →</button></section>
   </main>
 
-  <footer><a class="brand" href="#top"><span class="brand-mark">ZG</span><b>Zamba<span>Gawa</span></b></a><p>Local services, powered by local talent.</p><small>Portfolio MVP by Daniele Quiesha E. Diaz</small></footer>
+  <footer><a class="brand" href="#top"><img src="/assets/zambagawa-logo.svg" alt="" class="brand-logo"><b>Zamba<span>Gawa</span></b></a><p>Local services, powered by local talent.</p><small>Portfolio MVP by Daniele Quiesha E. Diaz</small></footer>
 
   <dialog id="bookingDialog"><button class="dialog-close" aria-label="Close booking form">×</button><div class="dialog-content"><p class="kicker">Booking request</p><h2 id="bookingTitle">Request a schedule</h2><p id="bookingService"></p><form id="bookingForm"><input type="hidden" name="providerId"><div class="form-grid"><label><span>Your name</span><input name="customerName" required minlength="2" autocomplete="name"></label><label><span>Email</span><input name="email" type="email" required autocomplete="email"></label><label><span>Phone number</span><input name="phone" required minlength="7" autocomplete="tel"></label><label><span>Preferred date</span><input name="preferredDate" type="date" required></label><label class="full"><span>Job location</span><select name="municipality" required><option value="">Choose municipality</option><option>Olongapo</option><option>Subic</option><option>Castillejos</option><option>San Marcelino</option><option>Botolan</option><option>Iba</option></select></label><label class="full"><span>What needs to be done?</span><textarea name="details" required minlength="10" rows="4" placeholder="Describe the job, preferred time, and important details."></textarea></label></div><p class="form-error" id="formError" role="alert"></p><button class="primary-btn submit-booking" type="submit">Send booking request →</button></form><div class="success-state" id="successState" hidden><span>✓</span><h3>Request received</h3><p>Your booking reference is:</p><strong id="bookingReference"></strong><button class="primary-btn" type="button" id="doneButton">Done</button></div></div></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
