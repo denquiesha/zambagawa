@@ -1,44 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160">
-  <!-- Generator: Adobe Illustrator 30.8.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 1)  -->
-  <defs>
-    <style>
-      .st0 {
-        fill: #0b7c83;
-      }
-
-      .st1 {
-        fill: #fff;
-      }
-
-      .st2 {
-        fill: #776a6a;
-      }
-
-      .st3 {
-        fill: #85ddb3;
-      }
-
-      .st4 {
-        fill: #123f49;
-      }
-
-      .st5 {
-        fill: #e6e6e6;
-      }
-    </style>
-  </defs>
-  <rect class="st0" x="103.65" y="99.1" width="6.2" height="6.2"/>
-  <rect class="st0" x="111.69" y="99.1" width="6.2" height="6.2"/>
-  <rect class="st0" x="111.69" y="106.76" width="6.2" height="6.2"/>
-  <rect class="st0" x="103.65" y="106.76" width="6.2" height="6.2"/>
-  <path class="st1" d="M112.18,86.15"/>
-  <path d="M146.17,122.95"/>
-  <path class="st2" d="M-166.01,192.06"/>
-  <path class="st5" d="M150.22,116.96"/>
-  <path class="st4" d="M9.55,129.07h132.71l7.9-11.88h-3.72c-2.06,0-4.13,0-6.19,0h-.09c-30.69,0-61.38,0-92.07,0,25.96-28.76,74.6-82.11,77.87-86.29L9.55,129.07Z"/>
-  <polygon class="st3" points="9.54 129.07 125.95 30.9 103.57 30.9 9.54 129.07"/>
-  <polygon class="st4" points="33.05 59.12 24.23 50.45 30.39 43.36 91.64 43.36 103.57 30.9 26.9 31.02 8.14 51.6 25.08 67.41 33.05 59.12"/>
-  <polygon class="st0" points="140.03 117.19 150.19 117.19 151.88 114.82 112.19 71.35 112.19 86.01 140.03 117.19"/>
-  <polygon class="st3" points="76.85 105.87 91.26 105.94 112.19 86.01 112.25 71.29 76.85 105.87"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">ZambaGawa</title>
+  <path fill="#123f49" d="M9.55 129.07h132.71l7.9-11.88h-10c-30.69 0-61.38 0-92.07 0 25.96-28.76 74.6-82.11 77.87-86.29L9.55 129.07Z"/>
+  <path fill="#f3e7ce" d="m9.54 129.07 116.41-98.17h-22.38L9.54 129.07Z"/>
+  <path fill="#123f49" d="m33.05 59.12-8.82-8.67 6.16-7.09h61.25l11.93-12.46-76.67.12L8.14 51.6l16.94 15.81 7.97-8.29Z"/>
+  <path fill="#0b7c83" d="M140.03 117.19h10.16l1.69-2.37-39.69-43.47v14.66l27.84 31.18Z"/>
+  <path fill="#f3e7ce" d="m76.85 105.87 14.41.07 20.93-19.93.06-14.72-35.4 34.58Z"/>
+  <g fill="#0b7c83">
+    <path d="M103.65 99.1h6.2v6.2h-6.2z"/><path d="M111.69 99.1h6.2v6.2h-6.2z"/>
+    <path d="M103.65 106.76h6.2v6.2h-6.2z"/><path d="M111.69 106.76h6.2v6.2h-6.2z"/>
+  </g>
 </svg>
